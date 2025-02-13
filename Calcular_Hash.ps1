@@ -2,7 +2,7 @@
 
 Clear-Host
 
-# Obtener la fecha en formato Año-Mes-Día_HoraMinuto (sin caracteres inválidos)
+# Obtener la fecha en formato Año-Mes-Día_HoraMinuto
 $fecha = Get-Date -Format "yyyy-MM-dd_HHmm"
 
 Write-Host " "
@@ -20,7 +20,7 @@ Write-Host " "
 $unidades | ForEach-Object { Write-Host "$($_.Name) - $($_.Root)" }
 
 # Pedir al usuario que seleccione una unidad
-$unidadSeleccionada = Read-Host "Ingrese la letra de la unidad que desea usar (Ej: C, D, E)"
+$unidadSeleccionada = Read-Host "Dime la unidad de almacenamiento:"
 
 # Validar si la unidad existe
 if ($unidades.Name -contains $unidadSeleccionada.ToUpper()) {
